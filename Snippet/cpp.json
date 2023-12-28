@@ -1,0 +1,27 @@
+{
+	"Basic CPP Structure": {
+		"prefix": "cpp",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"#define ll long long int",
+			"int main(){",
+			"	ios_base::sync_with_stdio(false);cin.tie(NULL);",
+			"	ll T;",
+			"	cin >> T;",
+			"	while(T--){",
+			"",
+			"",
+			"",
+			"	}",
+			"	return 0;",
+			"}"
+		]
+	},
+	"Yes No Ternary": {
+		"prefix": "yesNo",
+		"body": [
+			"	()?cout<<\"Yes\"<<endl:cout<<\"No\"<<endl;"
+		]
+	}
+}
