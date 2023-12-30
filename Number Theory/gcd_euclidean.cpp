@@ -8,6 +8,16 @@ int gcd(int a, int b){
   return gcd(b%a,a);
 }
 
+// ll gcd(ll a, ll b){
+//   // A IS GREATER THAN B
+//   while(b!=0){
+//     ll r=a%b;
+//     a=b;
+//     b=r;
+//   }
+//   return a;
+// }
+
 int main(){
   // ios_base::sync_with_stdio(false);cin.tie(NULL);
 
