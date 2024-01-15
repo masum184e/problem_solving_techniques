@@ -21,6 +21,20 @@ vector<ll> prime_sieve(ll N){
     return primes;
 }
 
+void countPrimes(ll lower, ll upper){ 
+  vector<ll> primes=prime_sieve(upper);
+  ll count=0;
+
+  cout<<"Primes within the range between "<<lower<<" and "<<upper<<": ";
+  for(ll i=0;i<primes.size();i++)
+    if(primes[i]>=lower && primes[i]<=upper){
+      cout<<primes[i]<<" ";
+      count++;
+    }
+
+  cout<<endl<<"Number of primes: "<<count<<endl;
+}
+
 int main(){
     ll N;
     cout<<"Enter boundary for prime: ";
@@ -30,6 +44,13 @@ int main(){
     vector<ll> primes=prime_sieve(N);
     for(ll i=0;i<primes.size();i++)
         cout<<primes[i]<<" ";
+
+    ll lower,upper;
+    cout<<endl<<"Enter lower bound: ";
+    cin>>lower;
+    cout<<"Enter upper bound: ";
+    cin>>upper;
+    countPrimes(lower,upper);
 
     return 0;
 }
