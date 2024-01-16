@@ -2,18 +2,18 @@
 using namespace std;
 #define ll long long int
 
-ll gcd_euclidean_recursive(ll a, ll b, ll &t1, ll &t2){
+ll gcd_euclidean_recursive(ll a, ll b, ll &x, ll &y){
   // A IS GREATER THAN B
   if(a==0){
-    t1=1,t2=0;
+    x=0,y=1;
     return b;
   }
   
-  ll x,y;
-  ll gcd=gcd_euclidean_recursive(b%a,a,x,y);
+  ll x1,y1;
+  ll gcd=gcd_euclidean_recursive(b%a,a,x1,y1);
 
-  t1=y;
-  t2=x-(b/a)*y;
+  x=y1-(b/a)*x1;
+  y=x1;
 
   return gcd;
 }
@@ -21,7 +21,7 @@ ll gcd_euclidean_recursive(ll a, ll b, ll &t1, ll &t2){
 ll gcd_euclidean_iterative(ll a, ll b, ll &t1, ll &t2){
   // A IS GREATER THAN B
   ll prevX,prevY,currX,currY,tmpX,tmpY;
-  prevX=0,prevY=1,currX=1,currY=0;
+  prevX=1,prevY=0,currX=0,currY=1;
 
   while(b!=0){
     ll q=a/b;
