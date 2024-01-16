@@ -19,6 +19,7 @@ ll gcd_euclidean_recursive(ll a, ll b, ll &t1, ll &t2){
 }
 
 ll gcd_euclidean_iterative(ll a, ll b, ll &t1, ll &t2){
+  // A IS GREATER THAN B
   ll prevX,prevY,currX,currY,tmpX,tmpY;
   prevX=0,prevY=1,currX=1,currY=0;
 
