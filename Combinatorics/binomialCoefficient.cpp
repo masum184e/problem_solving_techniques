@@ -13,13 +13,23 @@ ll binomialCoefficient(ll n, ll r){
     return triangle[n][r];
 }
 
+void pascalTriangle(ll row){
+    for(ll i=0;i<row;i++){
+        for(ll j=0;j<=i;j++)cout<<binomialCoefficient(i,j)<<" ";
+        cout<<endl;
+    }
+}
+
 int main(){
 
     ll n,r;
     cout<<"Enter Value of N: ";cin>>n;
     cout<<"Enter Value of R: ";cin>>r;
 
-    cout<<"Binomial Coefficient-("<<n<<"C"<<r<<"): "<<binomialCoefficient(n,r)<<endl;
+    cout<<"Binomial Coefficient-("<<n<<"C"<<r<<"): "<<binomialCoefficient(n,r)<<endl<<endl;
+
+    cout<<"Enter End Line for Pascal Triangle: ";cin>>n;
+    pascalTriangle(n);
 
     return 0;
 }
