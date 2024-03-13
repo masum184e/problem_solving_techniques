@@ -22,12 +22,23 @@ ll modularExponentiation(ll a, ll b){
     return pwr;
 }
 
+ll fastPower(ll a, ll n){
+    if(n==0)return 1;
+    
+    ll subProb=fastPower(a, n/2);
+    ll subProbSq=subProb*subProb;
+
+    if(n&1)return a*subProbSq;
+    return subProbSq;
+}
+
 int main(){
     ll a,b;
     cout<<"Enter Base Number: ";cin>>a;
     cout<<"Enter Exponent Number: ";cin>>b;
     cout<<"Power("<<a<<","<<b<<")-Binary: "<<binaryExponentiation(a,b)<<endl;
     cout<<"Power("<<a<<","<<b<<")-Modular: "<<modularExponentiation(a,b)<<endl;
+    cout<<"Fast Power("<<a<<","<<b<<"): "<<fastPower(a,b)<<endl;
 
     return 0;
 }
