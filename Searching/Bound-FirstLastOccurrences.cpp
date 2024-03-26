@@ -18,6 +18,23 @@ int lower_bound(vector<int> arr, int item){
     return index;
 }
 
+// LAST OCCURENCES
+int upper_bound(vector<int> arr, int item){
+    int left,mid,right,index;
+    left=0,right=arr.size()-1,index=-1;
+
+    while(left<=right){
+        mid=left+(right-left)/2;
+        if(arr[mid]==item){
+            index=mid;
+            left=mid+1;
+        }else if(arr[mid]<item)left=mid+1;
+        else right=mid-1;
+    }
+
+    return index;
+}
+
 int main(){
   int size,search;
 
@@ -34,6 +51,7 @@ int main(){
   cout<<endl;
 
   cout<<"First Occurences Found at Index: "<<lower_bound(arr,search)<<endl;
+  cout<<"Last Occurences Found at Index : "<<upper_bound(arr,search)<<endl;
 
   return 0;
 }
