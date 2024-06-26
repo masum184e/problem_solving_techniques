@@ -27,6 +27,10 @@ int getLastBit(int num) {
     return num & 1;
 }
 
+int removeLastBit(int n) {
+    return n & (n - 1);
+}
+
 int main(){
     
     int num,i;
@@ -39,6 +43,7 @@ int main(){
     cout<<"After clearing bit "<<i<<": "<<clearIthBit(num, i)<<endl;
     cout<<"After toggling bit "<<i<<": "<<toggleIthBit(num, i)<<endl;
     cout<<"The last bit of "<<num<<" is: "<<getLastBit(num)<<endl;
+    cout<<"Removed last bit of "<<num<<" is: "<<removeLastBit(num)<<endl;
 
     return 0;
 }
