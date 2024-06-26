@@ -22,6 +22,11 @@ string decimalToBinary(int num) {
     bitset<32> binary(num);
     return binary.to_string();
 }
+
+int getLastBit(int num) {
+    return num & 1;
+}
+
 int main(){
     
     int num,i;
@@ -33,6 +38,7 @@ int main(){
     cout<<"After setting bit "<<i<<": "<<setIthBit(num, i)<<endl;
     cout<<"After clearing bit "<<i<<": "<<clearIthBit(num, i)<<endl;
     cout<<"After toggling bit "<<i<<": "<<toggleIthBit(num, i)<<endl;
+    cout<<"The last bit of "<<num<<" is: "<<getLastBit(num)<<endl;
 
     return 0;
 }
