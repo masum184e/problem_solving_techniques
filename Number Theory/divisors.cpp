@@ -5,9 +5,14 @@ using namespace std;
 vector<ll> divisors(int n){
   vector<ll> divisorList;
 
-  for(ll i=1;i<=n;i++)
-    if(n%i==0)
+  for(ll i=1;i<=sqrt(n);i++){
+    if(n%i==0){
       divisorList.push_back(i);
+      if(i!=n/i){
+        divisorList.push_back(n/i);
+      }
+    }
+  }
 
   return divisorList;
 }
