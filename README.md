@@ -51,3 +51,18 @@ if(x > INT_MAX){
 }
 ```
 3. __Modular arithmatic:__ you can use modulo `10^9+7` as a limit to avoid overflow.
+
+# Bit Manipulation
+## Indexing
+### 0-Based Indexing
+The bit at position 0 represents the least significant bit (LSB), and the bit at position n−1 represents the most significant bit (MSB).
+```cpp
+int number = 5;
+bool isBitSet = (number & (1 << 0)) != 0;
+```
+### 1-Based Indexing
+The bit at position 1 represents the least significant bit, and the bit at position n represents the most significant bit.
+```cpp
+int number = 5;
+bool isBitSet = (number & (1 << (1 - 1))) != 0;
+```
