@@ -66,3 +66,13 @@ The bit at position 1 represents the least significant bit, and the bit at posit
 int number = 5;
 bool isBitSet = (number & (1 << (1 - 1))) != 0;
 ```
+# Even and Odd
+- count the number of even number between range [a, b]:
+    $$ \frac{b}{2} - \left(\frac{a-1}{2}\right) $$
+  count the number of odd number between range [a, b]:
+    $$ \text{b−a+1} $$
+- $$ \text{even}^{\text{even}}=\text{even} $$
+- $$ \text{odd}^{\text{odd}}=\text{odd} $$
+- $$ \text{even}+{\text{even}}=\text{even} $$
+- $$ \text{odd}+{\text{odd}}=\text{even} $$
+- $$ \text{even}+{\text{odd}}=\text{odd} $$
