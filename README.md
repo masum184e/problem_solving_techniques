@@ -76,3 +76,12 @@ bool isBitSet = (number & (1 << (1 - 1))) != 0;
 - $$ \text{even}+{\text{even}}=\text{even} $$
 - $$ \text{odd}+{\text{odd}}=\text{even} $$
 - $$ \text{even}+{\text{odd}}=\text{odd} $$
+
+# Time Limit
+| **Input Size (n)**  | **Allowed Time Complexity**                     | **Operation Limit (\(\approx 10^8\) per second)**       |
+|---------------------|--------------------------------------------------|---------------------------------------------------------|
+| $$ \ n\leq10^6 \ $$ | $$ \ O(n) \ $$ $$ \ O(nlog n) \ $$                 | Up to **10 million** iterations (linear and log-linear) |
+| $$ \ n\leq10^5 \ $$ | $$ \ O(n) \ $$ $$ \ O(nlog n) \ $$ $$ \ O({n}^{2}) \ $$    | Up to **10 billion** iterations (quadratic)             |
+| $$ \ n\leq10^4 \ $$ | $$ \ O(\text{n}^\text{2}) \ $$ $$ \ O(n\sqrt{n}) \ $$             | **Quadratic and sub-quadratic operations**              |
+| $$ \ n\leq10^3 \ $$ | $$ \ O(\text{n}^{3}) \ $$                                   | **Cubic operations** allowed                            |
+| $$ \ n\leq100  \ $$ | $$ \ O({2}^{n}) \ $$ $$ \ O(n!) \ $$                     | **Exponential operations** allowed                      |
