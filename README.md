@@ -67,21 +67,46 @@ int number = 5;
 bool isBitSet = (number & (1 << (1 - 1))) != 0;
 ```
 # Even and Odd
-- count the number of even number between range [a, b]:
-    $$ \frac{b}{2} - \left(\frac{a-1}{2}\right) $$
+- count the number of even number between range [a, b]: 
+  $$
+  \left\lfloor \frac{b}{2} \right\rfloor - \left\lfloor \frac{a-1}{2} \right\rfloor
+  $$
   count the number of odd number between range [a, b]:
-    $$ \text{b−a+1} $$
-- $$ \text{even}^{\text{even}}=\text{even} $$
-- $$ \text{odd}^{\text{odd}}=\text{odd} $$
-- $$ \text{even}+{\text{even}}=\text{even} $$
-- $$ \text{odd}+{\text{odd}}=\text{even} $$
-- $$ \text{even}+{\text{odd}}=\text{odd} $$
+  $$ 
+  (b - a + 1) - \left( \left\lfloor \frac{b}{2} \right\rfloor - \left\lfloor \frac{a-1}{2} \right\rfloor \right) 
+  $$
+- $$ {even}^{even}={even} $$
+- $$ {odd}^{odd}={odd} $$
+- $$ {even}+{even}={even} $$
+- $$ {odd}+{odd}={even} $$
+- $$ {even}+{odd}={odd} $$
 
 # Time Limit
 | **Input Size (n)**  | **Allowed Time Complexity**                     | **Operation Limit (\(\approx 10^8\) per second)**       |
 |---------------------|--------------------------------------------------|---------------------------------------------------------|
-| $$ \ n\leq10^6 \ $$ | $$ \ O(n) \ $$ $$ \ O(nlog n) \ $$                 | Up to **10 million** iterations (linear and log-linear) |
-| $$ \ n\leq10^5 \ $$ | $$ \ O(n) \ $$ $$ \ O(nlog n) \ $$ $$ \ O({n}^{2}) \ $$    | Up to **10 billion** iterations (quadratic)             |
-| $$ \ n\leq10^4 \ $$ | $$ \ O(\text{n}^\text{2}) \ $$ $$ \ O(n\sqrt{n}) \ $$             | **Quadratic and sub-quadratic operations**              |
-| $$ \ n\leq10^3 \ $$ | $$ \ O(\text{n}^{3}) \ $$                                   | **Cubic operations** allowed                            |
-| $$ \ n\leq100  \ $$ | $$ \ O({2}^{n}) \ $$ $$ \ O(n!) \ $$                     | **Exponential operations** allowed                      |
+| $ \ n\leq10^6 \ $ | $ \ O(n) \ $, $ \ O(nlog n) \ $                 | Up to **10 million** iterations (linear and log-linear) |
+| $ \ n\leq10^5 \ $ | $ \ O(n) \ $, $ \ O(nlog n) \ $, $ \ O({n}^{2}) \ $    | Up to **10 billion** iterations (quadratic)             |
+| $ \ n\leq10^4 \ $ | $ \ O(\text{n}^\text{2}) \ $, $ \ O(n\sqrt{n}) \ $             | **Quadratic and sub-quadratic operations**              |
+| $ \ n\leq10^3 \ $ | $ \ O(\text{n}^{3}) \ $                                   | **Cubic operations** allowed                            |
+| $ \ n\leq100  \ $ | $ \ O({2}^{n}) \ $, $ \ O(n!) \ $                     | **Exponential operations** allowed                      |
+
+# Sum
+- sum of integers in the range [a,b]:
+  $$ \frac{b-a+1}{2} \times (a + b) $$
+
+# Reverse vs Sort
+## reverse
+- time complexity is O(n)
+- doesn't consider the original order
+## sort
+- time complexity is O(nlogn)
+- changes order based on sorting criteria
+
+# Binary Search
+1. Sort the array
+2. Define search space
+3. Handle corner cases
+4. Conditional Check
+5. Function building
+6. Update search space
+7. Extract solution
