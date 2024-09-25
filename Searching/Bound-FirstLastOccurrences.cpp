@@ -1,8 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// FIRST OCCURENCES
-int lower_bound(vector<int> arr, int item){
+int first_occurences(vector<int> arr, int item){
     int left,mid,right,index;
     left=0,right=arr.size()-1,index=-1;
 
@@ -18,8 +17,7 @@ int lower_bound(vector<int> arr, int item){
     return index;
 }
 
-// LAST OCCURENCES
-int upper_bound(vector<int> arr, int item){
+int last_occurences(vector<int> arr, int item){
     int left,mid,right,index;
     left=0,right=arr.size()-1,index=-1;
 
@@ -33,6 +31,30 @@ int upper_bound(vector<int> arr, int item){
     }
 
     return index;
+}
+
+int custom_lower_bound(vector<int> arr, int item){
+    int left,mid,right;
+    left=0,right=arr.size();
+
+    while(left<right){
+        mid=left+(right-left)/2;
+        (arr[mid]<item)?left=mid+1:right=mid;
+    }
+
+    return left;
+}
+
+int custom_upper_bound(vector<int> arr, int item){
+    int left,mid,right;
+    left=0,right=arr.size();
+
+    while(left<right){
+        mid=left+(right-left)/2;
+        (arr[mid]<=item)?left=mid+1:right=mid;
+    }
+
+    return left;
 }
 
 int main(){
@@ -50,8 +72,10 @@ int main(){
 
   cout<<endl;
 
-  cout<<"First Occurences Found at Index: "<<lower_bound(arr,search)<<endl;
-  cout<<"Last Occurences Found at Index : "<<upper_bound(arr,search)<<endl;
+  cout<<"First Occurences Found at Index: "<<first_occurences(arr,search)<<endl;
+  cout<<"Last Occurences Found at Index : "<<last_occurences(arr,search)<<endl;
+  cout<<"Lower Bound Found at Index: "<<custom_lower_bound(arr,search)<<endl;
+  cout<<"Upper Bound Found at Index : "<<custom_upper_bound(arr,search)<<endl;
 
   return 0;
 }
