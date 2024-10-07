@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ll long long int
+#define int long long int
 
-ll binaryExponentiation(ll a, ll b){
-    ll pwr=1;
+int binaryExponentiation(int a, int b){
+    int pwr=1;
     while(b){
         if(b&1)pwr*=a;
         a*=a;
@@ -12,8 +12,8 @@ ll binaryExponentiation(ll a, ll b){
     return pwr;
 }
 
-ll modularExponentiation(ll a, ll b){
-    ll pwr=1,mod = 1e9 + 7;
+int modularExponentiation(int a, int b){
+    int pwr=1,mod = 1e9 + 7;
     while(b){
         if(b&1)pwr=(pwr*a)%mod;
         a=(a*a)%mod;
@@ -22,18 +22,27 @@ ll modularExponentiation(ll a, ll b){
     return pwr;
 }
 
-ll fastPower(ll a, ll n){
-    if(n==0)return 1;
+double fastPower(double a, int n){
+    if(n==INT_MAX)return(a==1)?1:(a==-1)?-1:0;
+    if(n==INT_MIN)return(a==1 || a==-1)?1:0;
+
+h    int N=n;
+    if(N<0){
+        a=1/a;
+        N=-N;
+    }
+
+    if(n==0)return 1.0;
     
-    ll subProb=fastPower(a, n/2);
-    ll subProbSq=subProb*subProb;
+    double subProb=fastPower(a, N/2);
+    double subProbSq=subProb*subProb;
 
     if(n&1)return a*subProbSq;
     return subProbSq;
 }
 
-int main(){
-    ll a,b;
+int32_t main(){
+    int a,b;
     cout<<"Enter Base Number: ";cin>>a;
     cout<<"Enter Exponent Number: ";cin>>b;
     cout<<"Power("<<a<<","<<b<<")-Binary: "<<binaryExponentiation(a,b)<<endl;
