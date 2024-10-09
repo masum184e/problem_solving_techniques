@@ -1,3 +1,52 @@
+# Topic Discussed
+- Array
+    - Generate Subbarray
+    - Unique Pair
+- Big Integers
+    - Addition
+- Bit Masking
+    - Arithmetic
+    - Bit Operation
+    - Even Odd
+    - Power
+    - Swap
+- Graph
+    - Combinatorics
+        - Binomial Coeefficient
+        - Birthday Paradox
+        - Catalan Number
+        - Number of digit in factorial
+        - Zero at end of factorial
+    - Prime
+        - Is Prime
+        - Prime Factorization
+        - Segmented Sieve
+        - Sieve of Eratosthenes
+    - Chinese Remainder
+    - Divisors
+    - Euler Totient
+    - Exponentiation
+    - Euclidean
+    - Extended Euclidean
+    - Matrix Exponentiation
+    - Modulo Arithmetic
+    - Fast Multiplication
+    - MMI
+- Number Theory
+    - Shortestpath BFS
+- Searching
+    - Lower-Upper Bound
+- Sorting
+    - Inversion Count
+    - Is Sorted
+- Recursive Direction
+- Overflow Underflow
+- Bit Indexing
+- Even Odd
+- Time Limit
+- Sum
+- Reverse VS Sort
+- Binary Search
 # Recursive Direction
 ## Forward Recursion
 The recursive calls happen first, and any operations are performed after all recursive calls have returned.
